@@ -1,3 +1,4 @@
+// Descriptions and badges for licenses
 const licenses = {
   "None" : {
     "description" : "No Licensing",
@@ -25,6 +26,7 @@ const licenses = {
   }
 }
 
+// Generate the title and include a badge if a license is used
 const generateTitle = (data) => {
   let titleContent = `# ${data.title}`;
   if (data.license !== "None")
@@ -37,7 +39,7 @@ ${licenses[data.license].badge}`
 }
 
 // function to generate markdown for README
-function generateMarkdown(data) {
+const generateMarkdown = (data) => {
   return `${generateTitle(data)}
 
 ## Description 
@@ -46,7 +48,6 @@ ${data.description}
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -72,4 +73,5 @@ Feel free to contact the developer at ${data.email} about contributing to [https
 `;
 }
 
+// Export this module
 module.exports = generateMarkdown;

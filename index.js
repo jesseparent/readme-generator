@@ -1,7 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const generatePage = require('./utils/generateMarkdown.js');
 
 // array of questions for user
 const questions = [
@@ -99,8 +98,8 @@ const validateEmail = (email) => {
   return re.test(email.toLowerCase());
 }
 
-// function to write README file
-function writeToFile(fileName, fileContent) {
+// Function to write README file
+const writeToFile = (fileName, fileContent) => {
   return new Promise((resolve, reject) => {
     fs.writeFile(fileName, fileContent, err => {
       // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
@@ -120,13 +119,13 @@ function writeToFile(fileName, fileContent) {
 }
 
 // function to initialize program
-function init() {
-  inquirer.prompt(questions)
-    .then(formData => generateMarkdown(formData))
-    .then(readmeData => {
+const init = () => {
+  inquirer.prompt(questions) // Ask Questions for Readme
+    .then(formData => generateMarkdown(formData)) // Generate the markdown
+    .then(readmeData => { // Write markdown to Readme file in dist folder
       return writeToFile("./dist/README.md", readmeData);
     })
-    .then(result => {
+    .then(result => { // Give feedback to user 
       if (result.ok) {
         console.log(result.message);
       }
