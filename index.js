@@ -21,7 +21,15 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'Enter a brief description of your project.',
+    message: 'Enter a brief description of your project. (Required)',
+    validate: projInput => {
+      if (projInput) {
+        return true;
+      } else {
+        console.log('Please enter your project description!');
+        return false;
+      }
+    }
   },
   {
     type: 'input',
@@ -37,7 +45,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'What is the license for this project?',
-    choices: ["None", "ISC", "MIT"]
+    choices: ["None", "BSD 3-Clause", "GNU GPL v3", "ISC", "MIT", "WTFPL"]
   },
   {
     type: 'input',
