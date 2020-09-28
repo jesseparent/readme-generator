@@ -69,7 +69,7 @@ ${data.contributing}
 ${data.test}
 
 ## Questions
-Feel free to contact the developer at ${data.email} about contributing to [https://github.com/${data.ghName}]
+Feel free to contact the developer at ${data.email} about contributing to https://github.com/${data.ghName}
 `;
 }
 

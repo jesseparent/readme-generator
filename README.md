@@ -30,7 +30,7 @@ Feel free to contact me over email if you have some great ideas
 Test manually
 
 ## Questions
-Feel free to contact the developer at jesse@parent.com about contributing to [https://github.com/jesseparent]
+Feel free to contact the developer at jesse@parent.com about contributing to https://github.com/jesseparent
 
 ## Screenshots
 The user entering data into the command line interface:
@@ -43,4 +43,4 @@ The README.md as rendered:
 ![Image](./screenshots/preview.jpg)
 
 ## Video
-A video demo of this project can be found at [https://screencast-o-matic.com/watch/cYQuVcdpOo]
+A video demo of this project can be found at https://screencast-o-matic.com/watch/cYQuVcdpOo
